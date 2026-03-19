@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="product">
+        <button id="btn">Add</button>
+        <table id="tvl">
+            
+        </table>
+    </div>
+
+    <script>
+    let btn = document.getElementById('btn')
+    let product = document.getElementById('product')
+    let tvl = document.getElementById('tvl')
+
+    btn.addEventListener('click', () => {
+        let productname = product.value.trim()
+
+        if (productname === "") return   // prevent empty entries
+
+        let tr = document.createElement('tr')
+        let th = document.createElement('th')
+
+        tvl.appendChild(tr)
+        tr.appendChild(th)
+        th.innerHTML = productname
+
+        product.value = ""   // ✅ clear input correctly
+    })
+</script>
+</body>
+</html>

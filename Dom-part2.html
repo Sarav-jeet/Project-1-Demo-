@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom ka agla part</title>ccg 
+</head>
+<style>
+    .newClass{
+        background-color: rgb(174, 52, 117);
+        border-radius: 35%;
+    }
+</style>
+<body>
+    <div id="box">Hello Coders!</div>
+
+    <Div id="newBox">Hello World!
+        <ul class="list">list
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </Div>
+
+    <script>
+        // let div= document.querySelector("div")
+        // console.log(div);
+        let container= document.querySelector("div");
+
+        // let val= container.getAttribute("id");
+        // console.log(val);
+
+        let con = container.setAttribute("id", "abcd");
+        console.log(container.getAttribute("id"));
+        
+        let newOne = document.querySelector("#newBox");
+        newOne.style.backgroundColor="cyan";
+        newOne.style.height="300px"
+        newOne.style.width="500px"
+        newOne.style.border="2px, black, solid"
+        newOne.style.textAlign="left"
+
+        
+        let btn= document.createElement("button");
+        btn.innerText="Click here";
+        btn.style.color="darkred"
+        btn.style.backgroundColor="cyan"
+        btn.style.margin="5px";
+        newOne.prepend(btn);
+
+        let heading= document.querySelector(".list");
+        heading.style.border="2px black Dashed"
+        heading.style.color="white";
+        heading.style.textAlign="center "
+        
+
+        let newLine= document.createElement("p");
+        newLine.innerText="The Js is not simple as much as you think"
+        newLine.style.textAlign="center"
+        heading.append(newLine);
+
+        let list= document.querySelector("ul")
+        list.classList.add("newClass");
+
+        let para= document.createElement("p");
+        para.innerText="Java Script provides Functions to our web Pages/ Html structure"
+        para.style.backgroundColor="darkred"
+        para.style.color="white"
+        para.style.borderRadius="20%"
+        para.style.textAlign="center"
+        newOne.appendChild(para);
+        
+        
+    </script>
+</body>
+</html>

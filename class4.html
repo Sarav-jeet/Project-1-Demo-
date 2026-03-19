@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in javascript</title>
+</head>
+<body>
+    <script>
+
+        //  function sarav(){
+        //     document.write("hello","<br>");
+        //     document.write("saravjeet", "<br>");
+        //  }
+        //  sarav();
+        
+        //  function sarav(msg){
+        //     document.write(msg);
+            
+        // }
+        // sarav("j&k");
+
+
+        // function sum(m, n ){
+        //     document.write(m+n,"<br>");
+        // }
+        // sum(50, 20);
+        // sum(55,57);
+        // sum(1008,12650);
+
+        // function sum(j,k){
+        //     console.log(j+k);
+        // }
+        // sum(5,4);
+
+        // function  multiplication(a,b){
+        //     console.log(a*b);
+        // }
+        // multiplication(5,9);
+
+        // Practice question of function
+
+        // function q1(){
+        //     console.log("hello javascript");
+        // }
+        // q1();
+
+
+        
+        // function q2(){
+        //     for(i=1; i<=5; i++){
+        //         console.log(i);
+        //     }
+        // }
+        // q2();
+
+
+
+        // function q3(x){
+        //     console.log("welcome",x);
+        // }
+        // q3("sarav");
+
+        // function q4(m, n ){
+        // console.log(m+n);
+        // }
+        // q4(50, 20);
+
+        // function q5(y){
+        //     if(y%2===0){
+        //         console.log(y, "is even")
+        //     }
+        //     else{console.log(y,"is odd");}
+        // }
+        
+        // q5(25);
+
+
+        // Arrow functions
+        
+        // let arrowSum = (a,b) => {
+        //     console.log(a+b);
+        // }
+        
+        
+        // let multiply= (r,s)=>{
+        //     console.log(r*s);
+        // }
+
+
+    // Practice Question for Vowel counting 
+    // function countVowel(str){
+    //     let count  = 0;
+    //     for(let char of str){
+    //         if(char=== "a" ||  char==="e" || char==="i" || char==="o" || char==="u"){
+    //             count++ 
+    //         }
+    //     }
+    //     console.log(count);
+    // }
+    
+
+    // let arrowvowel= (str)=>{
+    //     let count  = 0;
+    //     for(let char of str){
+    //         if(char=== "a" ||  char==="e" || char==="i" || char==="o" || char==="u"){
+    //             count++ 
+    //         }
+    //     }
+    //     console.log(count);
+    // }
+
+    // Next question is Check if a number is prime or not with function 
+
+    let checkPrime=(num)=>{
+        let isPrime = true;
+        if(num<=1){
+            isPrime= false;   
+            // iska matlab yeh hai ki humara number 1 ya usse chota hai to vo prime nhi mana jayega
+        }
+        else{
+            for(let i=2; i< num; i++){
+                if(num% i===0){
+                    isPrime= false; break;
+                }
+            }
+        }
+        // print krvane ke liye ye conditions 
+        if(isPrime){
+            console.log(num, "is a prime");
+        }
+        else{
+            console.log(num, "is not a prime");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+    </script>
+</body>
+</html>

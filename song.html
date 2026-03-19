@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lyrics Auto Slider</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    #lyricsBox {
+      font-size: 22px;
+      line-height: 35px;
+      min-height: 150px;
+      transition: opacity 0.8s ease;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .play {
+      background: #00c853;
+      color: white;
+    }
+
+    .stop {
+      background: #d50000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎵 Lyrics Player</h1>
+
+<div id="lyricsBox"></div>
+
+<button class="play" onclick="startLyrics()">Play</button>
+<button class="stop" onclick="stopLyrics()">Stop</button>
+
+<script>
+const lyrics = [
+"Tera mera afsana",
+"Poora hua na, jaana",
+"Pal-pal jeena muhaal mera tere bina",
+"Yeh saare nashe bekaar teri aankhon ke siva",
+"Ghar nahi jaata, main bahar, rehta tera intezaar",
+"Mere khwabon mein aa na karke 16 singhaar",
+"Main ab kyun hosh mein aata nahi?",
+"Sukoon yeh dil kyun paata nahi?",
+"Kyun todun khud se jo the waade?",
+"Ke ab yeh ishq nibhana nahi",
+"Main modun tumse jo yeh chehra",
+"Dobara nazar milana nahi",
+"Yeh duniya jaane mera dard",
+"Tujhe yeh nazar kyun aata nahi?"
+];
+
+let index = 0;
+let interval;
+let speech = window.speechSynthesis;
+
+function showLyrics() {
+  const box = document.getElementById("lyricsBox");
+  
+  if (index >= lyrics.length) {
+    index = 0;
+  }
+
+  let chunk = lyrics.slice(index, index + 4).join("<br>");
+  
+  box.style.opacity = 0;
+  setTimeout(() => {
+    box.innerHTML = chunk;
+    box.style.opacity = 1;
+  }, 500);
+
+  speakText(lyrics.slice(index, index + 4).join(" "));
+  
+  index += 4;
+}
+
+function startLyrics() {
+  showLyrics();
+  interval = setInterval(showLyrics, 5000);
+}
+
+function stopLyrics() {
+  clearInterval(interval);
+  speech.cancel();
+}
+
+function speakText(text) {
+  let utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  speech.cancel();
+  speech.speak(utterance);
+}
+</script>
+
+</body>
+</html>

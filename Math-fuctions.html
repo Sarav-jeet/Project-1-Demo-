@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math-Functions</title>
+</head>
+<body>
+    <script>
+        // 1)Rounding functions
+        
+
+        let num= Math.round(400.49);
+        console.log(num);
+
+        let number= Math.round(4.50)
+        console.log(number);
+
+        let num2= Math.floor(200.112);
+        console.log(num2)
+        let num3= Math.ceil(400.001)
+        console.log(num3);
+
+        let num4 = Math.trunc(-51.0269)  //removes the decimal value
+        console.log(num4);
+
+        //Power and root functions 
+        
+        let ex1 = Math.pow(2, 3); //Math.pow(base, exponent)
+        console.log(ex1);
+
+        let ex2= Math.sqrt(169) //Square root batata hai 
+        console.log(ex2)
+
+        let ex3= Math.cbrt(64)  //Cube root batata hai 
+        console.log(ex3)
+
+        //Absolute & Sign
+
+        let ex4= Math.abs(-50.88) //kisi bhi negetive Number ko Positive me convert Kar sakta hai 
+        console.log(ex4);
+
+        let ex5= Math.sign(525) //ye function sirf ye batata hai ki value positve me hai ya negetive me hai, Agar positive me hai to ye "1" return krta hai aur agar negetive me hai to ye -1 return karta hai aur agar value "0" hai to yeh 0 hi return kar deta hai 
+        console.log(ex5);
+
+      let ex6 = Math.max(50,60, 77, 77.01, 50.259);
+      console.log(ex6)
+
+      //random Number 
+
+      let ex7= Math.random()
+      console.log(ex7)
+
+
+      //Otp generating Method 1
+      let otp= Math.floor(1000 + Math.random()* 9000 )
+      console.log(otp)
+
+      //Otp generating Method 2
+      let ab= Math.random()*9000
+      let cd= ab+1000
+      let otpNumber= Math.floor(cd);
+      console.log(otpNumber);
+
+    </script>
+</body>
+</html>

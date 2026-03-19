@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(document object model)</title>
+</head>
+
+<style>
+ #heading{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+</style>
+    
+<body>
+   <h1 id="heading"></h1>
+
+<script>
+   let lyrics = document.getElementById("heading")
+
+setTimeout(function(){
+    lyrics.innerHTML += "Mai ab kyu hosh me aata nahi...<br>"
+    lyrics.style.opacity = "1"
+    lyrics.style.transform = "translateY(0)"
+}, 2000)
+
+setTimeout(function(){
+    lyrics.innerHTML += "Sukoon ye dil kyu pata nai...<br>"
+    lyrics.style.opacity = "1"
+    lyrics.style.transform = "translateY(0)"
+}, 4000)
+
+setTimeout(function(){
+    lyrics.innerHTML += "kyu todu khud se the jo waade ...<br>"
+    lyrics.style.opacity = "1"
+    lyrics.style.transform = "translateY(0)"
+}, 6000)
+
+setTimeout(function(){
+    lyrics.innerHTML += "ke ab ye ishq nibhana naii...<br>"
+    lyrics.style.opacity = "1"
+    lyrics.style.transform = "translateY(0)"
+}, 8000)
+
+setTimeout(function(){
+    lyrics.innerHTML += "mai modun tumse jo ye chehra ...<br>"
+    lyrics.style.opacity = "1"
+    lyrics.style.transform = "translateY(0)"
+}, 10000)
+
+setTimeout(function(){
+    lyrics.innerHTML += "dobara nazar milana naii....<br>"
+    lyrics.style.opacity = "1"
+    lyrics.style.transform = "translateY(0)"
+}, 12000)
+
+</script>
+
+
+</body>
+</html>

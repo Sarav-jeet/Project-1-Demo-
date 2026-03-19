@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+</head>
+<div>
+    <h2></h2>
+    
+</div>
+
+<body>
+    <script>
+        var number = 12.34
+        document.write(Math.abs(number), "<br>")
+        document.write(Math.ceil(number), "<br>")
+        document.write(Math.floor(number), "<br>")
+        document.write(Math.round(number), "<br>")
+        document.write(22 / 7, "<br>")
+        document.write(Math.trunc(Math.PI), "<br>")
+        document.write(Math.pow(2, 16), "<br>")
+        document.write(Math.sqrt(25), "<br>")
+        document.write(Math.cbrt(64), "<br>")
+        document.write(Math.min(34, 35, 66, 21), "<br>")
+        document.write(Math.max(34, 35, 66, 21), "<br>")
+        document.write(Math.random(), "<br>")
+        document.write(Math.floor(Math.random() * 10000), "<br>")
+        // Generate a random number between 0 and 9999
+        let num = Math.floor(Math.random() * 10000);
+
+        // Convert to string and pad with leading zeros to ensure 4 digits
+        let formatted = String(num).padStart(4, '1');
+
+        document.write(formatted); // Example output: "0047", "9876", "1200"
+    </script>
+</body>
+
+</html>
