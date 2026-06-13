@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let target = 25;   // fixed number
+
+let guess = null
+
+while (guess !== target) {
+    guess = Number(prompt("Enter a number"));
+
+    if (guess === target) {
+        alert("Enter ✅ Correct number!");
+    } else {
+        alert("error");
+    }
+}
+
+</script>
+
+</body>
+</html>

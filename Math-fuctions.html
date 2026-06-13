@@ -6,9 +6,102 @@
     <title>Math-Functions</title>
 </head>
 <body>
+
+    <h1>Math Functions</h1>
+    <h4>1. Math.round()
+
+Use: Number ko nearest integer me round karta hai
+👉 .5 ya usse upar → next number
+👉 .5 se niche → previous number
+
+Math.round(4.6) // 5
+Math.round(4.3) // 4
+🔹 2. Math.floor()
+
+Use: Hamesha number ko neeche (down) round karta hai
+
+Math.floor(4.9) // 4
+
+👉 Mostly use hota hai random integer banane me
+
+🔹 3. Math.ceil()
+
+Use: Hamesha number ko upar (up) round karta hai
+
+Math.ceil(4.1) // 5
+🔹 4. Math.trunc()
+
+Use: Decimal part hata deta hai (sirf integer rakhta hai)
+
+Math.trunc(4.9) // 4
+🔹 5. Math.pow()
+
+Use: Power calculate karta hai (x^y)
+
+Math.pow(2, 3) // 8
+
+👉 Use: exponent calculation, scientific maths
+
+🔹 6. Math.sqrt()
+
+Use: Square root nikalta hai
+
+Math.sqrt(25) // 5
+
+👉 Use: distance, geometry calculations
+
+🔹 7. Math.cbrt()
+
+Use: Cube root nikalta hai
+
+Math.cbrt(27) // 3
+🔹 8. Math.abs()
+
+Use: Negative number ko positive bana deta hai
+
+Math.abs(-10) // 10
+
+👉 Use: distance, difference calculation
+
+🔹 9. Math.sign()
+
+Use: Number ka sign batata hai
+
+-1 → negative
+0 → zero
+1 → positive
+
+Math.sign(-5) // -1
+Math.sign(5)  // 1
+🔹 10. Math.max()
+
+Use: Sabse bada number nikalta hai
+
+Math.max(3, 7, 2) // 7
+
+👉 Use: highest value find karna
+
+🔹 11. Math.random()
+
+Use: 0 se 1 ke beech random number deta hai
+
+Math.random() // 0.23 (example)
+
+👉 Random 1–10 number:
+
+Math.floor(Math.random() * 10) + 1
+
+👉 Use: games, OTP, random selection
+
+🔹 12. Math.floor() (Special Use with random)
+
+Use: Random decimal ko integer me convert karne ke liye
+
+Math.floor(Math.random() * 100)
+
+👉 Output: 0–99 ke beech random number</h4>
     <script>
         // 1)Rounding functions
-        
 
         let num= Math.round(400.49);
         console.log(num);

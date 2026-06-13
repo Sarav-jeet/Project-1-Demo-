@@ -20,3 +20,13 @@
     <button ondblclick= "alert('hello!')">Click</button>
 </body>
 </html>
+function betterThanAverage(classPoints, yourPoints) {
+  // 1. Calculate the sum of class points
+  const classSum = classPoints.reduce((a, b) => a + b, 0);
+  
+  // 2. Calculate average (including your points)
+  const average = (classSum + yourPoints) / (classPoints.length + 1);
+  
+  // 3. Compare your points to the average
+  return yourPoints > average;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Functions (Revision)</title>
+</head>
+<body>
+    <input type="" id="data"><br>
+    <button onclick="check()">Check</button>
+    <h1 id="result"></h1>
+    <script>
+        //  console.log("Hello World");
+        //  alert("Hello World")
+
+        // let base = prompt("please enter the base value")
+        // let height = prompt("please enter the height value")
+        // let area= (base*height)/2;
+        // document.write(area); //Right angle triangle's area 
+
+        let a= 3;
+        let b= 6;
+        let c= 7;
+        let s= (a+b+c)/2;
+        let formula= s*(s-a)*(s-b)*(s-c)
+        let squareRoot= Math.sqrt(formula)
+        console.log(squareRoot)//Area of a any type of Triangle by Heron's Formula 
+
+        //Swapping of two numbers Using Temporary variable:-
+        let x= 5;
+        let y=6;
+        let temp;
+        temp= x;
+        x=y;
+        y= temp
+        console.log( x, y);
+
+        //check if a number is a positive or negetive or a zero
+        function check(){
+            let value= document.querySelector("#data").value;
+            let result= Math.sign(value);
+            document.querySelector("#result").innerText= result;
+        }
+        
+
+
+    </script>
+</body>
+</html>
